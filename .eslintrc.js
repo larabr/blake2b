@@ -7,5 +7,15 @@ module.exports = {
 
   "rules": {
     "no-undef": "error"
-  }
+  },
+
+  "overrides": [
+    {
+      "files": "index.d.ts",
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint"
+      ]
+    }
+  ]
 };
