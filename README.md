@@ -16,16 +16,18 @@ npm install @openpgpjs/blake2b
 ```
 
 ## Usage
-
+### Basic example
 ```js
 const blake2b = require('blake2b')
 
-var output = new Uint8Array(64)
+var outputLength = 64;
 var input = Buffer.from('hello world')
 
-blake2b(output.length) // initialise
+const hashedBuffer = blake2b(outputLength) // initialise
   .update(input) // input data to hash (can be called multiple times, e.g. when streaming)
-  .digest(output) // finalize digest and copy hash in `output`
+  .digest() // finalize digest and return output buffer
+
+const hashed = new Uint8Array(hashedBuffer);
 ```
 
 ### API

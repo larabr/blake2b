@@ -222,7 +222,6 @@ class Blake2b {
 
   /**
    * Return a BLAKE2b hash
-   * @param {Uint8Array} [out] pre-allocated output buffer to fill
    * @returns {ArrayBuffer} message digest
    */
   digest() {
