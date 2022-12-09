@@ -1,5 +1,5 @@
 export class Blake2b {
-  update(input: Uint8Array);
+  update(input: Uint8Array): this;
   digest(): ArrayBuffer;
 }
 
